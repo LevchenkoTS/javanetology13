@@ -55,4 +55,34 @@ class ProductTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+
+    public void searchAuthor() {
+
+        manager.add(product1);
+        manager.add(product2);
+
+
+        Product[] expected = {product1};
+        Product[] actual = manager.searchBy("Автор1");
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+
+    public void searchVendor() {
+
+        manager.add(product1);
+        manager.add(product2);
+
+
+        Product[] expected = {product2};
+        Product[] actual = manager.searchBy("производитель1");
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
 }
