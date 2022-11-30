@@ -25,6 +25,7 @@ public class ProductManager {
                 Product[] tmp = new Product[result.length +1];
                 for (int i = 0; i < result.length; i++) {
                     tmp[i] = result[i];
+
                 }
                 tmp[result.length] = product;
                 result = tmp;
@@ -34,7 +35,7 @@ public class ProductManager {
     }
 
     public boolean matches(Product product, String search) {
-        if (product.getName().contains(search)) {
+        if (product.matches(search)) {
             return true;
         } else {
             return false;
