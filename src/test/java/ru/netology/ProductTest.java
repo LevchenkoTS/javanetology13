@@ -13,6 +13,7 @@ class ProductTest {
     Product product3 = new Book(3, "Книга 1", 1_000, "Автор2");
 
 
+
     @Test
     public void add() {
 
@@ -36,8 +37,8 @@ class ProductTest {
         manager.add(product3);
 
 
-        Product[] expected = {product1};
-        Product[] actual = manager.searchBy("Книга 1");
+        Product[] expected = {product2};
+        Product[] actual = manager.searchBy("Смартфон 1");
 
         Assertions.assertArrayEquals(expected, actual);
 
